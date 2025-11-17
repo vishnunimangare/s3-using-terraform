@@ -1,6 +1,7 @@
 variable "region" {
-  description = "AWS region for the bucket"
+  description = "AWS region where the S3 bucket will be created"
   type        = string
+  default     = "us-east-1"
 }
 
 variable "bucket_name" {
@@ -15,13 +16,13 @@ variable "force_destroy" {
 }
 
 variable "enable_versioning" {
-  description = "Toggle bucket versioning"
+  description = "Enable versioning on the S3 bucket"
   type        = bool
   default     = true
 }
 
 variable "enable_archive_transitions" {
-  description = "Toggle Glacier transition lifecycle rule"
+  description = "Enable Glacier transition lifecycle rule"
   type        = bool
   default     = true
 }
